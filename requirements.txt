@@ -1,4 +1,3 @@
---upgrade pip
 fastapi
 pydantic
 pydantic_core
