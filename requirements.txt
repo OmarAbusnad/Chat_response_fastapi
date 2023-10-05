@@ -1,0 +1,8 @@
+fastapi==0.103.1
+pydantic==2.1.1
+pydantic_core==2.4.0
+uvicorn==0.23.2
+pinecone-client==2.2.4
+openai==0.27.10
+langchain==0.0.270
+python-dotenv==1.0.0
