@@ -1,20 +1,22 @@
 from flask import Flask, request, jsonify
 from ChatFrompin import ArabicChatBot
-app = Flask(__name__)
 
-@app.route('/process_data', methods=['POST'])
-def process_data():
-    data = request.json['data']  # تحصل هنا على البيانات المرسلة من التطبيق Flutter
+def creat_api():
+    app = Flask(__name__)
 
-    response_jpt=ArabicChatBot()
-    qeury=response_jpt.run(data)
-    # تستعد لإرسال البيانات الأخرى إلى التطبيق Flutter
-    print(qeury)
-    response_data = {'result': qeury}
-    return jsonify(response_data)
+    @app.route('/process_data', methods=['POST'])
+    def process_data():
+        data = request.json['data']  # تحصل هنا على البيانات المرسلة من التطبيق Flutter
 
-if __name__ == '__main__':
-    app.run(debug=Flase,host='0.0.0.0', port=5000)
+        response_jpt=ArabicChatBot()
+        qeury=response_jpt.run(data)
+        # تستعد لإرسال البيانات الأخرى إلى التطبيق Flutter
+        print(qeury)
+        response_data = {'result': qeury}
+        return jsonify(response_data)
+
+    # if __name__ == '__main__':
+    #     app.run(host='0.0.0.0', port=5000)
 
 
 
