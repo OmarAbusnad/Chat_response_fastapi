@@ -3,3 +3,5 @@ pinecone-client
 openai
 langchain
 python-dotenv
+uvicorn
+gunicorn
