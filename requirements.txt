@@ -1,7 +1,4 @@
-fastapi
-pydantic
-pydantic_core
-uvicorn
+flask
 pinecone-client
 openai
 langchain
